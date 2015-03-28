@@ -1,0 +1,10 @@
+%a{ 'ng-href': '#/', href: 'javascript:void(0)' } Home
+%div
+  %div.wrap{'ng-controller': 'PostsController as postController'}
+    %h1
+      There are
+      %span.highlight {{postController.getTotal()}}
+
+    %div{ 'ng-repeat': 'post in postController.posts'}
+      %h3 {{post.title}}
+      %div{'ng-bind-html': 'post.body'}

@@ -1,0 +1,13 @@
+<a href='javascript:void(0)' ng-href='#/'>Home</a>
+<div>
+  <div class='wrap' ng-controller='PostsController as postController'>
+    <h1>
+      There are
+      <span class='highlight'>{{postController.getTotal()}}</span>
+    </h1>
+    <div ng-repeat='post in postController.posts'>
+      <h3>{{post.title}}</h3>
+      <div ng-bind-html='post.body'></div>
+    </div>
+  </div>
+</div>
